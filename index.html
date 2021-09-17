@@ -22,11 +22,8 @@
         </p>
         </div>
         <div>
-        <p id="objective">Software engineer with experience in all
-        levels of the web application stack, specifically interested
-        in creating highly performant front
-        end experiences built on elegant APIs. Passionate about tools and automation
-        that make developers more productive.</p>
+        <p id="objective">Cryptographic engineer / applied cryptographer. I like memory-safe languages,
+        quantum-resistant cryptography, elegant protocols, privacy-respecting systems, secure primitive abstractions, and making sure the development cycle enables humans to write secure software with minimal friction.</p>
         </div>
         <div class="clear"></div>
         <dl>
@@ -41,10 +38,10 @@
           <dt>Skills</dt>
           <dd>
             <h2>Languages + Frameworks</h2>
-            <p>JavaScript/ECMAScript, NodeJS, Coffeescript, Python, Backbone.js, React, AngularJS, SASS/CSS, Java, Jersey, Guice, Spring
+            <p>Rust, Golang, JavaScript/ECMAScript, NodeJS, Python, React, SASS/CSS, Java
             </p>
             <h2>Tools</h2>
-            <p>Linux/Unix, git, svn, perforce, grunt, puppet, AWS, MySQL, redis, memcached</p>
+            <p>Cargo, GitHub Actions, Google Cloud, AWS, OpenTelemetry, macOS, Linux/Unix, git, property-based testing, fuzzing, svn, perforce,  RocksDB, MySQL </p>
           </dd>
         </dl>
 
@@ -53,7 +50,80 @@
           </dt>
           <dd>
 
-            <h2>Senior Software Engineer<span>Brightcove | July 2014 - Present</span></h2>
+            <h2>Cryptographic Engineer<span>Zcash Foundation | May 2019 - Present</span></h2>
+            <ul>
+                <li>
+                    Lead engineer
+                    on <a href="https://github.com/ZcashFoundation/zebra">Zebra</a>,
+                    a Rust implementation
+                    of <a href="https://zips.z.cash/protocol/protocol.pdf">Zcash</a>,
+                    a privacy-preserving cryptocurrency. Drove from a
+                    proof-of-concept async, modular, network protocol
+                    implementation based on the Tokio runtime and Tower service
+                    abstractions to a full validation node that syncs and
+                    validates multiple kinds of zkSNARKs, elliptic curve
+                    signatures, blinded commitment merkle trees, and more in
+                    half the time of the standard reference implementation of
+                    Zcash, all in Rust modulo a few dependencies. Grew and
+                    mentored team from two to six contributors over two years.
+                </li>
+
+                <li>
+                    Implemented <a href="https://github.com/ZcashFoundation/zebra/tree/main/zebra-chain">Zcash's
+                    Orchard, Sapling, and Sprout key, note, commitment, and
+                    note commitment tree derivation / computation in Rust</a>,
+                    including property testing and test vector compatibility
+                    coverage.
+                </li>
+
+                <li>
+                  Implemented and upstreamed batch verification
+                  for <a href="https://github.com/zkcrypto/bellman/pull/59">Groth16
+                  zkSNARK proofs</a>
+                  and <a href="https://github.com/ZcashFoundation/redjubjub/pull/36">RedJubjub
+                  Schnorr-style signatures</a> that support
+                  re-randomization. This batch math was integrated
+                  with <a href="https://www.zfnd.org/blog/futures-batch-verification/">async
+                  futures-based verification</a>
+                  in <a href="https://github.com/ZcashFoundation/zebra/tree/main/zebra-consensus/src">Zebra</a>.
+                </li>
+
+                <li>
+                    Implemented
+                    the <a href="https://eprint.iacr.org/2020/852.pdf">FROST
+                    threshold signature protocol</a> for RedJubjub with Chelsea
+                    Komlo, which was
+                    <a href="https://github.com/ZcashFoundation/redjubjub/blob/main/zcash-frost-audit-report-20210323.pdf">audited
+                    in March 2021</a>. This has been integrated into at least
+                    one Zcash wallet so far.
+                </li>
+
+                <li>
+                    Set up and maintained Zebra CI/CD testing, review, build,
+                    and deployment pipeline, leveraging GitHub Actions,
+                    dependency locking & updating with Dependabot, code coverage
+                    collection and tracking, restricting merging to #main only
+                    from U2F/WebAuthn'd team members on green CI, automatic
+                    deployment of multiple zebrad nodes on green #main CI,
+                    monitored and kept up by automated deployment systems, with
+                    panics logged & correlated with change version, reported to
+                    the dev team.
+                </li>
+
+                <li>
+                    <a href="https://zips.z.cash/zip-0000#zip-editor-responsibilities-workflow">ZIP
+                    Editor</a> on behalf of the Zcash Foundation; reviewed Zcash
+                    Improvement Proposals and updates to the Zcash Specification
+                    for soundness, completeness, accuracy, compatibility,
+                    security, maintainability, complexity, privacy leaks, in
+                    collaboration with ZIP Editors from the Electric Coin
+                    Company.
+                </li>
+
+            </ul>
+
+            <h2>Senior Software Engineer<span>Brightcove | July 2014 - April
+            2019</span></h2>
             <ul>
                 <li>
                     Developed and released new VideoCloud Studio, specifically
@@ -135,30 +205,73 @@
         </dl>
 
         <dl>
-          <dt>Contributions</dt>
+          <dt>Talks</dt>
           <dd>
               <h2>
-                  <a href="https://tools.ietf.org/html/rfc7748">
-                      RFC 7748: Elliptic Curves for Security
+                  <a hef="https://www.youtube.com/watch?v=FGDpTGFF3aw">
+                      Making Zcash Shine with Rust<span>Zcon1 | June 2019</span>
                   </a>
-                  <span>Acknowledged Contributor</span>
               </h2>
-	      <h2>
-                  <a href="http://indocrypt2016.iiitd.edu.in/#program_committee">
-                      Indocrypt 2016
+
+              <h2>
+                  <a href="https://www.youtube.com/watch?v=ctP24WKusX0">
+                      Supersingular Isogeny Diffie-Hellman<span>Cloudflare Crypto Meetup | Feb 2017</span>
                   </a>
-                  <span>Subreviewer</span>
               </h2>
-              <span>Contributor to various open source <a href="https://github.com/dconnolly">projects</a>.</span>
+
+              <h2>
+                  <a href="https://www.youtube.com/watch?v=A0uh5SCXdqk">
+                      Elliptic Curve Cryptography<span>Facebook Security @Scale | Nov 2015</span>
+                  </a>
+              </h2>
           </dd>
+        </dl>
+
+        <dl>
+            <dt>Contributions</dt>
+            <dd>
+                <h2>
+                    <a href="https://github.com/ZcashFoundation/ristretto255-dh">
+                        ristretto255-dh
+
+                    </a>
+                    <span>
+                        Diffie-Hellman key exchange over the Ristretto255 group
+                        in Rust
+                    </span>
+
+                </h2>
+
+                <h2>
+                    <a href="https://tools.ietf.org/html/rfc7748">
+                        RFC 7748: Elliptic Curves for Security
+                    </a>
+                    <span>Acknowledged Contributor</span>
+                </h2>
+
+	            <h2>
+                    <a href="http://indocrypt2016.iiitd.edu.in/#program_committee">
+                        Indocrypt 2016
+                    </a>
+                    <span>Subreviewer</span>
+                </h2>
+
+                <span>Contributor to various open
+                source <a href="https://github.com/dconnolly">projects</a>.</span>
+            </dd>
         </dl>
 
 
         <dl>
           <dt>Extracurriculars</dt>
           <dd>
-            <h2>Boston Women's Rugby Football Club<span>CTO | Jan 2012 - August 2015</span></h2>
-            <span>Competitive Powerlifting</span>
+              <h2>
+                  <a href="https://securitycryptographywhatever.com/">Security, Cryptography, Whatever<span>Podcast creator, host, producer</span></a>
+              </h2>
+
+              <h2>Boston Women's Rugby Football Club<span>CTO | Jan 2012 - August 2015</span></h2>
+
+            <span>Competitive Powerlifting, Strongman</span>
           </dd>
         </dl>
 
